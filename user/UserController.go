@@ -21,7 +21,7 @@ func handleLogin(c *fiber.Ctx) error {
 	if len(credentials.Name) == 0 {
 		// user is trying to login
 		keys.UserId = 0
-		keys.AuthKey = "LoginKey"
+		keys.UserKey = "LoginKey"
 
 		if credentials.Password == "forbid" {
 			return c.SendStatus(http.StatusForbidden)
@@ -33,7 +33,7 @@ func handleLogin(c *fiber.Ctx) error {
 
 	// user is trying to create a new account
 	keys.UserId = 0
-	keys.AuthKey = "SignupKey"
+	keys.UserKey = "SignupKey"
 	if credentials.Password == "forbid" {
 		return c.SendStatus(http.StatusForbidden)
 	}
