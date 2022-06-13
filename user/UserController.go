@@ -17,11 +17,11 @@ func handleLogin(c *fiber.Ctx) error {
 	}
 
 	keys := userKeys{}
-	// todo check from a database
+	//todo check from a database
 	if len(credentials.Name) == 0 {
 		// user is trying to login
-		keys.UserId = 0
-		keys.UserKey = "LoginKey"
+		keys.UserId = 7236
+		keys.UserKey = 254
 
 		if credentials.Password == "forbid" {
 			return c.SendStatus(http.StatusForbidden)
@@ -32,8 +32,8 @@ func handleLogin(c *fiber.Ctx) error {
 	}
 
 	// user is trying to create a new account
-	keys.UserId = 0
-	keys.UserKey = "SignupKey"
+	keys.UserId = 9052
+	keys.UserKey = 148
 	if credentials.Password == "forbid" {
 		return c.SendStatus(http.StatusForbidden)
 	}

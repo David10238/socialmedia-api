@@ -22,7 +22,7 @@ func handleRequest(c *fiber.Ctx) error {
 		return c.SendStatus(http.StatusNotAcceptable)
 	}
 
-	// todo load from database
+	//todo load from database
 	res := newMessageResponse(
 		[]message{
 			{

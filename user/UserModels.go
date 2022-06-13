@@ -7,6 +7,6 @@ type userCredentials struct {
 }
 
 type userKeys struct {
-	UserId  int    `json:"user_id"`
-	UserKey string `json:"user_key"`
+	UserId  int `json:"user_id"`
+	UserKey int `json:"user_key"`
 }
