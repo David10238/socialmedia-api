@@ -26,6 +26,6 @@ func CheckAuthentication(c *fiber.Ctx) (int, error) {
 		return 0, c.SendStatus(http.StatusForbidden)
 	}
 
-	//todo check in database
+	//todo check in db
 	return userId, nil
 }

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+	"github.com/David10238/socialmedia-api/db"
 	"github.com/David10238/socialmedia-api/message"
 	"github.com/David10238/socialmedia-api/user"
 	"github.com/gofiber/fiber/v2"
@@ -9,6 +11,10 @@ import (
 )
 
 func main() {
+	db.Initialize()
+
+	fmt.Println(db.Conn.Name())
+
 	server := fiber.New()
 
 	server.Use(cors.New()) // allows client to connect

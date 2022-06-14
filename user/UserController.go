@@ -17,7 +17,7 @@ func handleLogin(c *fiber.Ctx) error {
 	}
 
 	keys := userKeys{}
-	//todo check from a database
+	//todo check from a db
 	if len(credentials.Name) == 0 {
 		// user is trying to login
 		keys.UserId = 7236
