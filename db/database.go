@@ -13,4 +13,11 @@ func Initialize() {
 		panic(err)
 	}
 	Conn = db
+
+	if err := db.AutoMigrate(
+		&User{},
+		&Friendship{},
+		&Message{}); err != nil {
+		panic(err)
+	}
 }
